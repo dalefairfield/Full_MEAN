@@ -1,0 +1,16 @@
+<div ng-controller='indexController'>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Action Show</th>
+          <th>Action Edit</th>
+          <th>Action Delete</th>
+        </tr>
+        <tr ng-repeat="friend in friends track by $index">
+          <td>{{ friend.firstname }} {{ friend.lastname }} </td>
+          <td><a href="#!/show/{{friend._id}}">Show</a></td>
+          <td><a href="#!/edit/{{friend._id}}">Edit</a></td>
+          <td><input type='submit' value='delete friend' ng-click='delete(friend._id)' ></td>
+        </tr>
+      </table>
+  </div>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <title>File Structure</title>
+ <!-- THESE TWO VERSIONS BELOW MUST MATCH (good thing bower will catch that for us, but be aware if you are using CDN's)!!! -->
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+
+    <script type="text/javascript" src="./client/factories/user_Factory.js"></script>
+      <script type="text/javascript" src="./client/controllers/edit_controller.js"></script>
+      <script type="text/javascript" src="./client/controllers/index_controller.js"></script>
+      <script type="text/javascript" src="./client/controllers/new_controller.js"></script>
+      <script type="text/javascript" src="./client/controllers/new_controller.js"></script>
+      <script type="text/javascript" src="./server/config/routes.js"></script>
+<script>
+    //  inject the ngRoute dependency in the module.
+    var myApp = angular.module('myApp', ['ngRoute']);
+    //  use the config method to set up routing:
+
+    </script>
+  </head>
+  <body>
+    <div ng-app='myApp'>
+        <a href="#!/new">New Friend </a>
+        <div ng-view="">
+        </div>
+    </div>
+  </body>
+</html>

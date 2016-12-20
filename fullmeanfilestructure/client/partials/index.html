@@ -1,0 +1,17 @@
+<div ng-controller='index_controller1'>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Action Show</th>
+        <th>Action Edit</th>
+        <th>Action Delete</th>
+      </tr>
+      <tr ng-repeat="user in users track by $index">
+        <td>{{ user.name }}</td>
+        <td><a href="">show</a></td>
+        <td><a href="">Edit</a></td>
+        <td><input type='submit' value='delete user' ng-click='deleteUsers($index)' ></td>
+      </tr>
+    </table>
+
+</div>
